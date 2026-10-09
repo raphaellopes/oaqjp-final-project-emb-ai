@@ -24,7 +24,7 @@ def emo_detector():
         the dominant emotion
     """
     text_to_analyze = request.args.get('textToAnalyze')
-    result = emotion_detector(text_to_analyze)
+    response = emotion_detector(text_to_analyze)
     response_formatted = f"For the given statement, the system response is \
             'anger': {response['anger']}, 'disgust': {response['disgust']}, \
             'fear': {response['fear']}, 'joy': {response['joy']} and \
